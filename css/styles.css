@@ -25,7 +25,7 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
 }
 /* header */
 .header {
@@ -330,15 +330,16 @@ textarea:focus {
 .form-agreement {
     margin-top: 20px;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .form-agreement input {
     cursor: pointer;
 }
 .agreement-label {
+    display: flex;
+    align-items: center;
     margin-left: 8px;
+
+    cursor: pointer;
 
     font-weight: 400;
     font-size: 14px;
@@ -352,6 +353,30 @@ textarea:focus {
     line-height: 1.7;
     
     color: var(--special-text-color);
+}
+/* cusomazing checkbox */
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.agreement-label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #2a2a2a;
+    border-radius: 3px;
+
+    margin-right: 7px;
+}
+.checkbox:checked + .agreement-label::before {
+    border-color: transparent;
+    background-color: var(--special-text-color);
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-repeat: no-repeat;
 }
 .form-btn {
     width: 200px;
@@ -646,13 +671,17 @@ margin-right: 30px;
     color: rgba(255, 255, 255, 0.6);
 }
 .sign-up-btn {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
     min-width: 200px;
     border: 1px solid;
     border-color: var(--special-text-color);
     border-radius: 4px;
     padding: 10px 28px;
-    text-align: left;
-        
+            
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
     color: #ffffff;

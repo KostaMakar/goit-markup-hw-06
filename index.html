@@ -98,7 +98,7 @@
                                 <textarea name="comment" id="comment" placeholder="Введіть текст"></textarea>
                             </div>
                             <div class="form-agreement">
-                                <input type="checkbox" name="agreement" id="agreement">
+                                <input class="checkbox" type="checkbox" name="agreement" id="agreement">
                                 <label class="agreement-label" for="agreement">Погоджуюся з розсилкою та приймаю 
                                     <a class="agreement-link" href="">Умови договору</a></label>
                             </div>
@@ -376,7 +376,11 @@
                     <p class="sign-up-text">Підпишіться на розсилку</p>
                     <div class="sign-up-section">
                     <input type="email" name="user-email" placeholder="E-mail">
-                    <button class="sign-up-btn" type="submit">Підписатися</button>
+                    <button class="sign-up-btn" type="submit">Підписатися 
+                        <svg width="24" height="24">
+                            <use href="./images/symbol-defs.svg#icon-icon-send"></use>
+                        </svg>
+                    </button>
                     </div>
                 </div>
             </div>
